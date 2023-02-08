@@ -68,9 +68,45 @@ kaseliokas.ideti(10);
 kaseliokas.skaiciuoti()
 
 
-/* 
-3.	Sukurti klasę Troleibusas. Konstruktoriuje sukurti savybę keleiviuSkaicius kuri yra lygi 0. Parašyti du metodus: ilipa(keleiviuSkaicius) ir islipa(keleiviuSkaicius). O taip pat parašyti metoda vaziuoja(), kuris į konsolę išvestų troleibusu važiuojančių keleivių skaičių. Atkreipkite dėmesį, kad troleibusu važiuoti neigiamas keleivių skaičius negali.
+/* 3.	
+Sukurti klasę Troleibusas. Konstruktoriuje sukurti savybę keleiviuSkaicius kuri yra lygi 0. Parašyti du metodus: ilipa(keleiviuSkaicius) ir islipa(keleiviuSkaicius). O taip pat parašyti metoda vaziuoja(), kuris į konsolę išvestų troleibusu važiuojančių keleivių skaičių. Atkreipkite dėmesį, kad troleibusu važiuoti neigiamas keleivių skaičius negali.
 */
+console.log(`
+Trecios uzduoties atskaymas:
+`)
+class Troleibusas {
+    constructor(keleiviuSkaicius = 0) {
+        this.keleiviuSkaicius = keleiviuSkaicius;
+    }
+
+    ilipa(keleiviuSkaicius) {
+        return this.keleiviuSkaicius += keleiviuSkaicius;
+    }
+
+    islipa(keleiviuSkaicius) {
+        return this.keleiviuSkaicius -= keleiviuSkaicius;
+    }
+
+    vaziuoja() {
+        if (this.keleiviuSkaicius >= 1) {
+            console.log(`Troleibusu važiuoja: ${this.keleiviuSkaicius} keleivis(-iai).`)
+        } else {
+            console.log('Troleibuse keleiviu nera.')
+        }
+    }
+}
+
+const vielabraukis = new Troleibusas();
+
+vielabraukis.ilipa(12);
+vielabraukis.islipa(1);
+vielabraukis.islipa(6);
+vielabraukis.ilipa(4)
+
+// vielabraukis.islipa(50);
+
+vielabraukis.vaziuoja();
+
 
 
 /* 
