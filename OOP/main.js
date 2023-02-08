@@ -1,7 +1,7 @@
-/* 
-1.	Sukurti klasę Kibiras1. Konstruktoriuje sukurti savybę akmenuKiekis  kuri lygi 0. Parašyti šiai klasei metodus, pridedančius akmenis: prideti1Akmeni() pridetiDaugAkmenu(kiekis) ir metodą išvedantį akmenų kiekį į konsolę- kiekPririnktaAkmenu(). Sukurti vieną kibiro objektą ir pademonstruoti akmenų rinkimą į kibirą ir rezultatų išvedimą.
+/* 1.
+Sukurti klasę Kibiras1. Konstruktoriuje sukurti savybę akmenuKiekis  kuri lygi 0. Parašyti šiai klasei metodus, pridedančius akmenis: prideti1Akmeni() pridetiDaugAkmenu(kiekis) ir metodą išvedantį akmenų kiekį į konsolę- kiekPririnktaAkmenu(). Sukurti vieną kibiro objektą ir pademonstruoti akmenų rinkimą į kibirą ir rezultatų išvedimą.
 */
-
+console.log(`Pirmos uzduoties atsakymas:`)
 class Kibiras1 {
     constructor(akmenuKiekis = 0) {
         this.akmenuKiekis = akmenuKiekis;
@@ -34,9 +34,38 @@ viedras.kiekPririnktaAkmenu();
 
 
 
-/* 
-2.	Sukurti klasę Pinigine. Konstruktoriuje sukurti dvi savybes popieriniaiPinigai ir metaliniaiPinigai. Parašyti metodą ideti(kiekis), kuris prideda pinigus į piniginę. Jeigu kiekis nedidesnis už 2, tai prideda prie metaliniaiPinigai, jeigu kitaip- prie popieriniaiPinigai. Parašykite metodą skaiciuoti(), kuris suskaičiuotų ir išvestų į konsolę popieriniaiPinigai ir metaliniaiPinigai sumą. Sukurti klasės objektą ir pademonstruoti veikimą. Nesvarbu kokios popierinės kupiūros ir metalinės monetos egzistuoja realiame pasaulyje.
+/* 2.	
+Sukurti klasę Pinigine. Konstruktoriuje sukurti dvi savybes popieriniaiPinigai ir metaliniaiPinigai. Parašyti metodą ideti(kiekis), kuris prideda pinigus į piniginę. Jeigu kiekis nedidesnis už 2, tai prideda prie metaliniaiPinigai, jeigu kitaip- prie popieriniaiPinigai. Parašykite metodą skaiciuoti(), kuris suskaičiuotų ir išvestų į konsolę popieriniaiPinigai ir metaliniaiPinigai sumą. Sukurti klasės objektą ir pademonstruoti veikimą. Nesvarbu kokios popierinės kupiūros ir metalinės monetos egzistuoja realiame pasaulyje.
 */
+
+console.log(`
+Antros uzduoties atskaymas:
+`)
+
+class Pinigine {
+    constructor(popieriniaiPinigai, metaliniaiPinigai) {
+        this.popieriniaiPinigai = popieriniaiPinigai
+        this.metaliniaiPinigai = metaliniaiPinigai
+    }
+
+    ideti(kiekis) {
+        return kiekis < 2 ? this.metaliniaiPinigai += kiekis : this.popieriniaiPinigai += kiekis;
+    }
+
+    skaiciuoti() {
+        console.log('Viso pinigu pinigineje:', this.popieriniaiPinigai + this.metaliniaiPinigai);
+    }
+
+}
+
+const kaseliokas = new Pinigine(10, 1);
+
+kaseliokas.ideti(5);
+kaseliokas.ideti(1.5);
+kaseliokas.ideti(0.6);
+kaseliokas.ideti(10);
+
+kaseliokas.skaiciuoti()
 
 
 /* 
