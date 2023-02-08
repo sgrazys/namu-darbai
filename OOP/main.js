@@ -89,7 +89,7 @@ class Troleibusas {
 
     vaziuoja() {
         if (this.keleiviuSkaicius >= 1) {
-            console.log(`Troleibusu važiuoja: ${this.keleiviuSkaicius} keleivis(-iai).`)
+            console.log(`Troleibuse važiuojanciu asmenu yra: ${this.keleiviuSkaicius}.`)
         } else {
             console.log('Troleibuse keleiviu nera.')
         }
@@ -102,6 +102,8 @@ vielabraukis.ilipa(12);
 vielabraukis.islipa(1);
 vielabraukis.islipa(6);
 vielabraukis.ilipa(4)
+vielabraukis.ilipa(2)
+vielabraukis.islipa(1)
 
 // vielabraukis.islipa(50);
 
