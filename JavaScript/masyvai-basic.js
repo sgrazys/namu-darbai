@@ -49,6 +49,14 @@ console.log(arr2);
 
 /* e. Papildykite masyvą papildomais 10 elementų su reikšmėmis nuo 5 iki 25, kad bendras masyvas padidėtų iki indekso 39; */
 
+console.log(`
+ANTRAS e.
+--------------------
+`)
+
+arr2.push(...[...Array(10)].map(_ => Math.floor(Math.random() * (25 - 5 + 1) + 5)))
+
+console.log(arr2);
 
 
 /* f. Iš masyvo elementų sukurkite du naujus masyvus. Vienas turi būti sudarytas iš neporinių indeksų reikšmių, o kitas iš porinių (pagal neporinį-porinį indeksą, ne reikšmę); */
