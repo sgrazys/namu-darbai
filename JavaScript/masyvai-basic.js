@@ -39,8 +39,17 @@ console.log(randArr.filter((_, i) => i % 2 === 0).reduce((t, n) => t + n, 0));
 
 
 /* d. Sukurkite naują masyvą, kurio reikšmės yra 1 uždavinio masyvo reikšmes minus tos reikšmės indeksas; */
+console.log(`
+ANTRAS d.
+--------------------
+`)
+const arr2 = [...randArr].map((a, i) => a - i)
+
+console.log(arr2);
 
 /* e. Papildykite masyvą papildomais 10 elementų su reikšmėmis nuo 5 iki 25, kad bendras masyvas padidėtų iki indekso 39; */
+
+
 
 /* f. Iš masyvo elementų sukurkite du naujus masyvus. Vienas turi būti sudarytas iš neporinių indeksų reikšmių, o kitas iš porinių (pagal neporinį-porinį indeksą, ne reikšmę); */
 
